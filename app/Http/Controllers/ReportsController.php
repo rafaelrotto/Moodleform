@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\c;
+use App\Models\Report;
 use Illuminate\Http\Request;
 
 class ReportsController extends Controller
@@ -35,7 +36,9 @@ class ReportsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Report::create($request->all());
+
+        return redirect()->back();
     }
 
     /**

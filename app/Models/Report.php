@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Report extends Model
 {
+    protected $table = "reports";
+
     use HasFactory;
+
+    protected $fillable = [
+        'date', 'month', 'start', 'end', 'duration', 'client', 'course', 'serviceType','class', 'obs'
+    ];
+
+    protected $guarded = [];
 }
