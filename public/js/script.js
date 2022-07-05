@@ -21,5 +21,8 @@ function CloseReportModal() {
     $('#reportModal').modal('hide');
 }
 
+var cor = document.getElementById('color');
+cor.style.display = 'none';
+
 
 

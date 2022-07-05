@@ -21,13 +21,9 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                     <label for="date">Data</label>
                                     <input type="text" class="form-control" id="date" name="date">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="month">Mês</label>
-                                    <input type="text" class="form-control" id="month" name="month">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -92,6 +88,19 @@
                                     <textarea name="obs" id="obs" name="obs" class="form-control"></textarea>
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status" class="form-control">
+                                        <option value="Finalizado">Finalizado</option>
+                                        <option value="Em andamento">Em andamento</option>
+                                        <option value="Pendente">Pendente</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="color" name="color" id="color" name="color" class="form-control"></input>
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-primary">Salvar</button>
                         </form>
                     </div>
@@ -112,10 +121,10 @@
                 <th scope="col">Horário Início</th>
                 <th scope="col">Aluno(a)</th>
                 <th scope="col">Curso</th>
-                <th scope="col">Atendimento</th>
+                <th scope="col">Tipo de Atendimento</th>
                 <th scope="col">Disciplina</th>
-                <th scope="col">Observação</th>
                 <th scope="col">Status</th>
+                <th scope="col"></th>
                 <th scope="col">Ação</th>
             </tr>
         </thead>
@@ -129,8 +138,8 @@
                 <td>{{ $report->course }}</td>
                 <td>{{ $report->serviceType }}</td>
                 <td>{{ $report->class }}</td>
-                <td>{{ $report->obs }}</td>
-                <td></td>
+                <td>{{ $report->status }}</td>
+                <td>{{ $report->color }}</td>
                 <td></td>
             </tr>
             @endforeach

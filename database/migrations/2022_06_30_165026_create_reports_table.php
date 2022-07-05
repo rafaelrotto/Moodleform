@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('date');
-            $table->string('month');
             $table->string('start');
             $table->string('end');
             $table->string('duration');
@@ -25,7 +24,9 @@ return new class extends Migration
             $table->string('course')->nullable()->default(NULL);
             $table->string('serviceType');
             $table->string('class');
-            $table->longText('obs');
+            $table->longText('obs')->nullable()->default(NULL);
+            $table->string('status');
+            $table->string('color');
 
 
         });

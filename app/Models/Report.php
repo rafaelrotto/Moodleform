@@ -12,7 +12,7 @@ class Report extends Model
     use HasFactory;
 
     protected $fillable = [
-        'date', 'month', 'start', 'end', 'duration', 'client', 'course', 'serviceType','class', 'obs'
+        'date', 'month', 'start', 'end', 'duration', 'client', 'course', 'serviceType','class', 'obs', 'status', 'color'
     ];
 
     protected $guarded = [];
