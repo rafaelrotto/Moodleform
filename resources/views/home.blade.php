@@ -104,11 +104,10 @@
         </div>
     </div>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped" id="reports">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Data</th>
-                <th scope="col">Mês</th>
                 <th scope="col">Horário Início</th>
                 <th scope="col">Horário Início</th>
                 <th scope="col">Aluno(a)</th>
@@ -121,45 +120,20 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($reports as $report)
             <tr>
-                <td></td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $report->date }}</td>
+                <td>{{ $report->start }}</td>
+                <td>{{ $report->end }}</td>
+                <td>{{ $report->client }}</td>
+                <td>{{ $report->course }}</td>
+                <td>{{ $report->serviceType }}</td>
+                <td>{{ $report->class }}</td>
+                <td>{{ $report->obs }}</td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
-                <td></td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 

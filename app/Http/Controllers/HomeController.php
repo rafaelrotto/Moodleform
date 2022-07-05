@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Report;
 use Illuminate\Http\Request;
+
+use DataTables;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $reports = Report::all();
+
+        return view('/home', ['reports' => $reports]);
     }
 }
