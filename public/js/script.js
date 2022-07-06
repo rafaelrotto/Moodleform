@@ -24,5 +24,18 @@ function CloseReportModal() {
 var cor = document.getElementById('color');
 cor.style.display = 'none';
 
+var status = document.getElementById('status').value;
+
+function cor() {
+    if (status == "Finalizado") {
+        document.getElementById('color').value = "#17da03";
+    } else if (status == "Em andamento") {
+        document.getElementById('color').value = "#fbc414";
+    } else if (status == "Pendente") {
+        document.getElementById('color').value = "#da030f";
+    }
+}
+
+
 
 

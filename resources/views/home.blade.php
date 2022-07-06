@@ -23,31 +23,73 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="date">Data</label>
-                                    <input type="text" class="form-control" id="date" name="date">
+                                    <input type="text" class="form-control @if($errors->has('date')) is-invalid @endif" id="date" name="date" value="{{old('date')}}">
+                                    @if($errors->has('date'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('date') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-5">
                                     <label for="start">Horário do início do atendimento</label>
-                                    <input type="text" class="form-control" id="start" name="start">
+                                    <input type="text" class="form-control @if($errors->has('start')) is-invalid @endif" id="start" name="start" value="{{old('start')}}">
+                                    @if($errors->has('start'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('start') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                                 <div class="form-group col-md-5">
                                     <label for="end">Horário do fim do atendimento</label>
-                                    <input type="text" class="form-control" id="end" name="end">
+                                    <input type="text" class="form-control @if($errors->has('end')) is-invalid @endif" id="end" name="end" value="{{old('end')}}">
+                                    @if($errors->has('end'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('end') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="duration">Duração</label>
-                                    <input type="text" class="form-control" id="duration" name="duration">
+                                    <input type="text" class="form-control @if($errors->has('duration')) is-invalid @endif" id="duration" name="duration" value="{{old('duration')}}">
+                                    @if($errors->has('duration'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('duration') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="client">Aluno(a)</label>
-                                    <input type="text" class="form-control" id="client" name="client">
+                                    <input type="text" class="form-control @if($errors->has('client')) is-invalid @endif" id="client" name="client" maxlength="100" value="{{old('client')}}">
+                                    @if($errors->has('client'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('client') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="course">Curso</label>
-                                    <input type="text" class="form-control" id="course" name="course">
+                                    <input type="text" class="form-control @if($errors->has('course')) is-invalid @endif" id="course" name="course" maxlength="100" value="{{old('course')}}">
+                                    @if($errors->has('course'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('course') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-row">
@@ -78,14 +120,28 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="class">Disciplina</label>
-                                    <input type="text" class="form-control" id="class" name="class">
+                                    <input type="text" class="form-control @if($errors->has('class')) is-invalid @endif" id="class" name="class" maxlength="100" value="{{old('class')}}">
+                                    @if($errors->has('class'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('class') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="obs">Observação</label>
                                     <br>
-                                    <textarea name="obs" id="obs" name="obs" class="form-control"></textarea>
+                                    <textarea name="obs" id="obs" name="obs" class="form-control @if($errors->has('obs')) is-invalid @endif" maxlength="500" placeholder="{{old('obs')}}"></textarea>
+                                    @if($errors->has('obs'))
+                                    <div id="invalid-feedback" class="invalid-feedback">
+                                        @foreach($errors->get('obs') as $error)
+                                        {{$error}}
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-row">
@@ -105,7 +161,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" onclick="cor()" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>
@@ -139,7 +195,7 @@
                 <td>{{ $report->serviceType }}</td>
                 <td>{{ $report->class }}</td>
                 <td>{{ $report->status }}</td>
-                <td>{{ $report->color }}</td>
+                <td type="color">{{ $report->color }}</td>
                 <td></td>
             </tr>
             @endforeach

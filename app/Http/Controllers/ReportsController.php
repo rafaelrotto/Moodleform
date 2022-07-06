@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReportsRequest;
 use App\Models\c;
 use App\Models\Report;
 use Illuminate\Http\Request;
@@ -34,7 +35,7 @@ class ReportsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReportsRequest $request)
     {
         Report::create($request->all());
 

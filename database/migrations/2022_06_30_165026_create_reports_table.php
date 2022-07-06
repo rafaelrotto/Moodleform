@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('client')->nullable()->default(NULL);
             $table->string('course')->nullable()->default(NULL);
             $table->string('serviceType');
-            $table->string('class');
+            $table->string('class')->nullable()->default(NULL);
             $table->longText('obs')->nullable()->default(NULL);
             $table->string('status');
             $table->string('color');
