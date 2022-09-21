@@ -7,7 +7,7 @@
     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Novo Relatório</button>
     <br>
     <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" class="modal" role="dialog">
         <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
@@ -157,7 +157,7 @@
                                     <input type="color" name="color" id="color" name="color" class="form-control"></input>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="cor()">Salvar</button>
+                            <button type="submit" class="btn btn-primary" onclick="setColor()">Salvar</button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -194,11 +194,22 @@
                 <td>{{ $report->serviceType }}</td>
                 <td>{{ $report->class }}</td>
                 <td>{{ $report->status }}</td>
-                <td type="color">{{ $report->color }}</td>
+                <td><input type="color" disabled value="{{ $report->color }}"></td>
                 <td></td>
             </tr>
             @endforeach
         </tbody>
     </table>
+
+    @if (count($errors) > 0)
+
+<script>
+    alert("Algumas informações estão incorretas, corrija os campos e tente novamente!");
+    $(document).ready(function() {
+        $('#myModal').modal('show');
+    });
+</script>
+
+@endif
 
     @endsection

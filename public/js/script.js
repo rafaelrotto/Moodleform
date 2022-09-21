@@ -24,9 +24,8 @@ function CloseReportModal() {
 var cor = document.getElementById('color');
 cor.style.display = 'none';
 
-var status = document.getElementById('status').value;
-
-function cor() {
+function setColor() {
+    var status = document.getElementById('status').value;
     if (status == "Finalizado") {
         document.getElementById('color').value = "#17da03";
     } else if (status == "Em andamento") {
