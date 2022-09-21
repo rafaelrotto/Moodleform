@@ -168,48 +168,50 @@
         </div>
     </div>
     <br>
-    <table class="table table-striped" id="reports">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Data</th>
-                <th scope="col">Horário Início</th>
-                <th scope="col">Horário Início</th>
-                <th scope="col">Aluno(a)</th>
-                <th scope="col">Curso</th>
-                <th scope="col">Tipo de Atendimento</th>
-                <th scope="col">Disciplina</th>
-                <th scope="col">Status</th>
-                <th scope="col"></th>
-                <th scope="col">Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($reports as $report)
-            <tr>
-                <td>{{ $report->date }}</td>
-                <td>{{ $report->start }}</td>
-                <td>{{ $report->end }}</td>
-                <td>{{ $report->client }}</td>
-                <td>{{ $report->course }}</td>
-                <td>{{ $report->serviceType }}</td>
-                <td>{{ $report->class }}</td>
-                <td>{{ $report->status }}</td>
-                <td><input type="color" disabled value="{{ $report->color }}"></td>
-                <td></td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <div class="table-responsive-lg">
+        <table class="table table-striped" id="reports">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Horário Início</th>
+                    <th scope="col">Horário Início</th>
+                    <th scope="col">Aluno(a)</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Tipo de Atendimento</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($reports as $report)
+                <tr>
+                    <td>{{ $report->date }}</td>
+                    <td>{{ $report->start }}</td>
+                    <td>{{ $report->end }}</td>
+                    <td>{{ $report->client }}</td>
+                    <td>{{ $report->course }}</td>
+                    <td>{{ $report->serviceType }}</td>
+                    <td>{{ $report->class }}</td>
+                    <td>{{ $report->status }}</td>
+                    <td><input type="color" disabled value="{{ $report->color }}"></td>
+                    <td></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 
     @if (count($errors) > 0)
 
-<script>
-    alert("Algumas informações estão incorretas, corrija os campos e tente novamente!");
-    $(document).ready(function() {
-        $('#myModal').modal('show');
-    });
-</script>
+    <script>
+        alert("Algumas informações estão incorretas, corrija os campos e tente novamente!");
+        $(document).ready(function() {
+            $('#myModal').modal('show');
+        });
+    </script>
 
-@endif
+    @endif
 
     @endsection

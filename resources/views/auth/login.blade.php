@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <!-- main CSS file -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <title>Reports</title>
 </head>
 
 <body>
@@ -65,7 +67,7 @@
                                     </button>
 
                                     @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a href="{{ route('forget.password.get') }}">
                                         {{ __('Esqueceu a senha?') }}
                                     </a>
                                     @endif
