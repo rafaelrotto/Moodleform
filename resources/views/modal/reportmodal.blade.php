@@ -19,7 +19,6 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="CloseReportModal()">Close</button>
       </div>
 
     </div>

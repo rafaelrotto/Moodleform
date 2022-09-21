@@ -157,11 +157,10 @@
                                     <input type="color" name="color" id="color" name="color" class="form-control"></input>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="submit" class="btn btn-primary" onclick="cor()">Salvar</button>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" onclick="cor()" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>
