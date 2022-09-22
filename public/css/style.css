@@ -3,14 +3,44 @@
 }
 
 .home{
-  padding-bottom: 40%;
+  padding-bottom: 45%;
+}
+
+.home .btn-info{
+  color: rgb(0, 0, 0);
+  background-color: #ff8614;
+  border: none;
+}
+
+.home .btn-primary{
+  color: aliceblue;
+  background-color: black;
+  border: none;
 }
 
 .login-container{
   padding-top: 10%;
 }
 
+.login-container .btn-primary{
+  color: rgb(0, 0, 0);
+  background-color: #ff8614;
+  border: none; 
+}
+
+.login-container a{
+  color: black;
+}
+
 .login-form{
-  padding-top: 30px;
-  padding-bottom: 50%;
+  padding-top: 10%;
+  padding-bottom: 48%;
+}
+
+#navbar {
+  background-color: rgb(255, 134, 20);
+}
+
+#navbar a{
+  color: black;
 }

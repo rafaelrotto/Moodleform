@@ -7,15 +7,16 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <title>Reports</title>
+
+    <link rel="shortcut icon" href="{{ asset('img/logo2.png') }}">
 </head>
 
 <body>
     <div class="login-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                <center><img src="/img/logo2.png" alt="Reports" width="200px"></a></center>
                 <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
-
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
