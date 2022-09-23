@@ -1,38 +1,44 @@
-.modal-body label{
+.modal-body label {
   font-size: 14px;
 }
 
-.home{
+.home {
   padding-bottom: 45%;
 }
 
-.home .btn-info{
+.home .btn-info {
   color: rgb(0, 0, 0);
   background-color: #ff8614;
   border: none;
 }
 
-.home .btn-primary{
+.home .btn-primary {
   color: aliceblue;
   background-color: black;
   border: none;
 }
 
-.login-container{
+.login-form .btn-primary {
+  color: rgb(0, 0, 0);
+  background-color: #ff8614;
+  border: none;
+}
+
+.login-container {
   padding-top: 10%;
 }
 
-.login-container .btn-primary{
+.login-container .btn-primary {
   color: rgb(0, 0, 0);
   background-color: #ff8614;
-  border: none; 
+  border: none;
 }
 
-.login-container a{
+.login-container a {
   color: black;
 }
 
-.login-form{
+.login-form {
   padding-top: 10%;
   padding-bottom: 48%;
 }
@@ -41,6 +47,6 @@
   background-color: rgb(255, 134, 20);
 }
 
-#navbar a{
+#navbar a {
   color: black;
 }

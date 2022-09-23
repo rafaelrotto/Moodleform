@@ -33,7 +33,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Relatórios</a>
+            <a href="/" class="logo me-auto"><img src="/img/logo2.png" alt="Reports" width="50px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
