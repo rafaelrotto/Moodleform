@@ -50,3 +50,8 @@
 #navbar a {
   color: black;
 }
+
+.register-container{
+  padding: 30px;
+  padding-bottom: 25%;
+}

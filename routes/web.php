@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::auth();
+Route::auth(['register' => false]);
 
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 
