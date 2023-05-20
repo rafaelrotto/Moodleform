@@ -27,7 +27,7 @@ class ReportsRequest extends FormRequest
             'date' => 'required|min:6|max:11',
             'start' => 'required|max:8',
             'end' => 'required|max:8',
-            'duration' => 'required|min:4|max:8',
+            'duration' => 'required|min:1',
             'client' => 'nullable|max:100',
             'course' => 'nullable|max:100',
             'class' => 'nullable|max:100',
@@ -54,7 +54,5 @@ class ReportsRequest extends FormRequest
             'obs.max' => 'O campo observações deve conter no máximo 500 caracteres!',
 
         ];
-        
-
     }
 }

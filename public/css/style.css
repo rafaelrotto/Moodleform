@@ -1,57 +1,73 @@
 .modal-body label {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+.modal-body p {
+    font-weight: 600;
 }
 
 .home {
-  padding-bottom: 45%;
+    padding-bottom: 45%;
 }
 
 .home .btn-info {
-  color: rgb(0, 0, 0);
-  background-color: #ff8614;
-  border: none;
+    color: rgb(0, 0, 0);
+    background-color: #ff8614;
+    border: none;
 }
 
 .home .btn-primary {
-  color: aliceblue;
-  background-color: black;
-  border: none;
+    color: aliceblue;
+    background-color: black;
+    border: none;
 }
 
 .login-form .btn-primary {
-  color: rgb(0, 0, 0);
-  background-color: #ff8614;
-  border: none;
+    color: rgb(0, 0, 0);
+    background-color: #ff8614;
+    border: none;
 }
 
 .login-container {
-  padding-top: 10%;
+    padding-top: 10%;
 }
 
 .login-container .btn-primary {
-  color: rgb(0, 0, 0);
-  background-color: #ff8614;
-  border: none;
+    color: rgb(0, 0, 0);
+    background-color: #ff8614;
+    border: none;
 }
 
 .login-container a {
-  color: black;
+    color: black;
 }
 
 .login-form {
-  padding-top: 10%;
-  padding-bottom: 48%;
+    padding-top: 10%;
+    padding-bottom: 48%;
 }
 
 #navbar {
-  background-color: rgb(255, 134, 20);
+    background-color: rgb(255, 134, 20);
 }
 
 #navbar a {
-  color: black;
+    color: black;
 }
 
-.register-container{
-  padding: 30px;
-  padding-bottom: 25%;
+.register-container {
+    padding: 30px;
+    padding-bottom: 25%;
+}
+
+.home .table {
+    max-width: 1366px;
+}
+
+.home .table th {
+    font-size: 14px;
+}
+
+.home .table td {
+    font-size: 12px;
 }

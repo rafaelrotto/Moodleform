@@ -99,4 +99,7 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
 
+<!-- Support Scripts -->
+<script src="{{ asset('js/support/modal/reports-modal.js') }}"></script>
+
 </html>

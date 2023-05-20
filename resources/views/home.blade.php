@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-4">
                                     <label for="start">Horário do início do atendimento</label>
                                     <input type="text" class="form-control @if($errors->has('start')) is-invalid @endif" id="start" name="start" value="{{old('start')}}">
                                     @if($errors->has('start'))
@@ -45,9 +45,9 @@
                                     </div>
                                     @endif
                                 </div>
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-4">
                                     <label for="end">Horário do fim do atendimento</label>
-                                    <input type="text" class="form-control @if($errors->has('end')) is-invalid @endif" id="end" name="end" value="{{old('end')}}">
+                                    <input type="text" class="form-control @if($errors->has('end')) is-invalid @endif" id="end" name="end" value="{{old('end')}}" onkeyup="returnDurationTime()">
                                     @if($errors->has('end'))
                                     <div id="invalid-feedback" class="invalid-feedback">
                                         @foreach($errors->get('end') as $error)
@@ -56,8 +56,8 @@
                                     </div>
                                     @endif
                                 </div>
-                                <div class="form-group col-md-2">
-                                    <label for="duration">Duração</label>
+                                <div class="form-group col-md-4">
+                                    <label for="duration">Duração (Minutos)</label>
                                     <input type="text" class="form-control @if($errors->has('duration')) is-invalid @endif" id="duration" name="duration" value="{{old('duration')}}">
                                     @if($errors->has('duration'))
                                     <div id="invalid-feedback" class="invalid-feedback">
@@ -66,6 +66,33 @@
                                         @endforeach
                                     </div>
                                     @endif
+                                </div>
+                            </div>
+                            <p>Tipo de atendimento</p>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="student" id="student">
+                                        <label class="form-check-label" for="student">
+                                            Aluno
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="teacher" id="teacher">
+                                        <label class="form-check-label" for="teacher">
+                                            Professor
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="employer" id="employer">
+                                        <label class="form-check-label" for="employer">
+                                            Funcionários e outros
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -173,8 +200,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Data</th>
-                    <th scope="col">Horário Início</th>
-                    <th scope="col">Horário Início</th>
+                    <th scope="col">Tempo</th>
                     <th scope="col">Aluno(a)</th>
                     <th scope="col">Curso</th>
                     <th scope="col">Tipo de Atendimento</th>
@@ -188,8 +214,7 @@
                 @foreach($reports as $report)
                 <tr>
                     <td>{{ $report->date }}</td>
-                    <td>{{ $report->start }}</td>
-                    <td>{{ $report->end }}</td>
+                    <td>{{ $report->duration }} minutos</td>
                     <td>{{ $report->client }}</td>
                     <td>{{ $report->course }}</td>
                     <td>{{ $report->serviceType }}</td>
@@ -213,5 +238,17 @@
     </script>
 
     @endif
+
+    <script>
+        const date = new Date();
+
+        let currentDay = String(date.getDate()).padStart(2, '0');
+
+        let currentMonth = String(date.getMonth() + 1).padStart(2, "0");
+
+        let currentYear = date.getFullYear();
+
+        document.getElementById('date').value = `${currentDay}${currentMonth}${currentYear}`
+    </script>
 
     @endsection
