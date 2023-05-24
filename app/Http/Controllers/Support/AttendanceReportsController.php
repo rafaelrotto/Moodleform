@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Support;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ReportsRequest;
-use App\Models\c;
 use App\Models\Report;
-use Illuminate\Http\Request;
 
-class ReportsController extends Controller
+class AttendanceReportsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -45,10 +44,9 @@ class ReportsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function show(c $c)
+    public function show()
     {
         //
     }
@@ -56,10 +54,9 @@ class ReportsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function edit(c $c)
+    public function edit()
     {
         //
     }
@@ -68,10 +65,9 @@ class ReportsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, c $c)
+    public function update()
     {
         //
     }
@@ -79,10 +75,9 @@ class ReportsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function destroy(c $c)
+    public function destroy()
     {
         //
     }
